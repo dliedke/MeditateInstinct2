@@ -1,0 +1,23 @@
+<properties>
+	<property id="progressBarWidth" type="number">140</property>	
+	<property id="globalSettingsIconsXPos" type="number">50</property>
+	<property id="globalSettingsValueXPos" type="number">71</property>
+	<property id="globalSettingsLinesYOffset" type="number">0</property>
+	<property id="sessionDetailsIconsXPos" type="number">10</property>
+	<property id="sessionDetailsValueXPos" type="number">34</property>
+	<property id="sessionDetailsAlertsLineYOffset" type="number">6</property>
+	<property id="sessionDetailsYOffset" type="number">40</property>
+	<property id="summaryHrIconsXPos" type="number">40</property>
+	<property id="summaryHrValueXPos" type="number">100</property>
+	<property id="summaryStressIconsXPos" type="number">50</property>
+	<property id="summaryStressValueXPos" type="number">70</property>
+	<property id="summaryHrvIconsXPos" type="number">50</property>
+	<property id="summaryHrvValueXPos" type="number">70</property>
+	<property id="summaryLinesYOffset" type="number">10</property>
+	<property id="meditateActivityIconsXPos" type="number">60</property>
+	<property id="meditateActivityIconsYOffset" type="number">0</property>
+	<property id="detailsModelLineHeight" type="number">27</property>
+	<property id="detailsModelIconHeight" type="number">32</property>
+	<property id="hmmTimePickerOutputXOffset" type="number">85</property>
+	<property id="mmssTimePickerOutputXOffset" type="number">75</property>
+</properties>
