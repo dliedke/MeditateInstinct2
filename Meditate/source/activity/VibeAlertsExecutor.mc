@@ -37,6 +37,13 @@ class VibeAlertsExecutor {
 				Attention.vibrate(getBlip());
 	    	}	
 		}
+
+		// Warn user 2min before ending the session
+		//if (me.mMeditateModel.getSessionTime() - me.mMeditateModel.elapsedTime == 120) {
+			// Vibrate blip
+		//	Attention.vibrate(getBlip());
+		//}
+		
 	}
 
 	private static function getLongContinuous() {
