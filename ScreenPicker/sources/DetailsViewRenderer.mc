@@ -12,6 +12,7 @@ module ScreenPicker {
 		function initialize(detailsModel) {
 			me.mDetailsModel = detailsModel;
 			me.progressBarWidth = App.getApp().getProperty("progressBarWidth");
+			me.sessionDetailsTitlePosY = App.getApp().getProperty("sessionDetailsTitlePosY");
 		}
 		
 		function renderBackgroundColor(dc) {				        
@@ -39,6 +40,7 @@ module ScreenPicker {
 	   		}   
 	    }
 	    
+		private var sessionDetailsTitlePosY;
 	    private var progressBarWidth;
 	    private const ProgressBarHeight = 16;
 	    
@@ -57,7 +59,7 @@ module ScreenPicker {
 	    
 	    private function displayTitle(dc, title, titleFont) {
 	        var textX = dc.getWidth() / 2;	
-	        dc.drawText(textX, TitlePosY, titleFont, title, Gfx.TEXT_JUSTIFY_CENTER);
+	        dc.drawText(textX, TitlePosY + sessionDetailsTitlePosY, titleFont, title, Gfx.TEXT_JUSTIFY_CENTER);
 	    }	      
 	        	
 		private function displayFontIcon(dc, icon, yPos) {

@@ -14,7 +14,8 @@ class MeditateView extends Ui.View {
         me.mMainDuationRenderer = null;
         me.mElapsedTime = null; 
         me.mHrStatusText = null;
-        me.mMeditateIcon = null;           
+        me.mMeditateIcon = null;   
+		me.iconsYOffset = App.getApp().getProperty("meditateActivityIconsYOffset");          
     }
     
     private var mElapsedTime;
@@ -24,6 +25,7 @@ class MeditateView extends Ui.View {
 	private var mHrvText;	
     private var mMeditateIcon;
     private var mIntervalAlertsRenderer;
+	private var iconsYOffset;
 
     private function createMeditateText(color, font, xPos, yPos, justification) {
     	return new Ui.Text({
@@ -46,10 +48,9 @@ class MeditateView extends Ui.View {
     private function renderHrStatusLayout(dc) {
     	var xPosText = dc.getWidth() / 2;
     	var yPosText = getYPosOffsetFromCenter(dc, 1);
-      	me.mHrStatusText = createMeditateText(Gfx.COLOR_WHITE, TextFont, xPosText + 3, yPosText, Gfx.TEXT_JUSTIFY_CENTER); 
+      	me.mHrStatusText = createMeditateText(Gfx.COLOR_WHITE, TextFont, xPosText + 3, yPosText + iconsYOffset, Gfx.TEXT_JUSTIFY_CENTER); 
       	
   	    var hrStatusX = App.getApp().getProperty("meditateActivityIconsXPos");
-		var iconsYOffset = App.getApp().getProperty("meditateActivityIconsYOffset");  
         var hrStatusY = getYPosOffsetFromCenter(dc, 1) + iconsYOffset; 
   	    me.mHrStatus = new ScreenPicker.Icon({        
         	:font => Gfx.FONT_XTINY,
@@ -66,7 +67,7 @@ class MeditateView extends Ui.View {
         
     function renderLayoutElapsedTime(dc) { 	
     	var xPosCenter = dc.getWidth() / 2;
-    	var yPosCenter = getYPosOffsetFromCenter(dc, 0);
+    	var yPosCenter = getYPosOffsetFromCenter(dc, 0) + iconsYOffset;
     	me.mElapsedTime = createMeditateText(me.mMeditateModel.getColor(), TextFont, xPosCenter, yPosCenter, Gfx.TEXT_JUSTIFY_CENTER);
     }
                 
@@ -78,7 +79,6 @@ class MeditateView extends Ui.View {
         var durationArcRadius = dc.getWidth() / 2;
         var mainDurationArcWidth = (dc.getWidth() / 4) - 20;  // Circle width
         me.mMainDuationRenderer = new ElapsedDuationRenderer(me.mMeditateModel.getColor(), durationArcRadius, mainDurationArcWidth);
-
 
 		// Initialize interval alerts		
 		var intervalAlertsArcRadius = dc.getWidth() / 2;

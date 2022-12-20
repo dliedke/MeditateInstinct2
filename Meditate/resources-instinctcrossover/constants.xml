@@ -15,11 +15,11 @@
 	<property id="summaryHrvValueXPos" type="number">70</property>
 	<property id="summaryLinesYOffset" type="number">10</property>
 	<property id="meditateActivityIconsXPos" type="number">60</property>
-	<property id="meditateActivityIconsYOffset" type="number">0</property>
-	<property id="detailsModelLineHeight" type="number">27</property>
+	<property id="meditateActivityIconsYOffset" type="number">30</property>
+	<property id="detailsModelLineHeight" type="number">60</property>
 	<property id="detailsModelIconHeight" type="number">32</property>
 	<property id="hmmTimePickerOutputXOffset" type="number">85</property>
 	<property id="mmssTimePickerOutputXOffset" type="number">75</property>
-	<property id="sessionDetailsTitlePosY" type="number">0</property>
-	<property id="heartRateChartPosY" type="number">0</property>
+	<property id="sessionDetailsTitlePosY" type="number">40</property>
+	<property id="heartRateChartPosY" type="number">25</property>
 </properties>

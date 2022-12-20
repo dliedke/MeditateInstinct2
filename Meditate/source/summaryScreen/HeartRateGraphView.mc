@@ -14,10 +14,12 @@ class HeartRateGraphView extends ScreenPicker.ScreenPickerView  {
 	var centerX;
 	var centerY;
 	var summaryModel;
+	var heartRateChartPosY;
 
     function initialize(summaryModel) {
     	ScreenPickerView.initialize(Gfx.COLOR_BLACK);
 		me.summaryModel = summaryModel;
+		me.heartRateChartPosY = App.getApp().getProperty("heartRateChartPosY"); 
     }
 	
     // Update the view
@@ -34,7 +36,7 @@ class HeartRateGraphView extends ScreenPicker.ScreenPickerView  {
 
 		// Calculate position of the chart
 		position_x = centerX - (centerX / 1.5) - 12;
-		position_y = centerY + (centerY / 2);
+		position_y = centerY + (centerY / 2)  + heartRateChartPosY;
 	
 		graph_height = dc.getHeight() / 3;
 		graph_width =  180;
@@ -83,7 +85,7 @@ class HeartRateGraphView extends ScreenPicker.ScreenPickerView  {
 
 		// Draw Time text
 		dc.drawText(centerX + centerX / 2 - 45, 
-					centerY + centerY / 2 + 20, 
+					centerY + centerY / 2 + 10 + heartRateChartPosY, 
 					Gfx.FONT_SYSTEM_XTINY, 
 					"Time:" + TimeFormatter.format(me.summaryModel.elapsedTime), 
 					Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);

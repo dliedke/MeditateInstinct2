@@ -84,7 +84,7 @@ module HrvAlgorithms {
 		//                also change min/max HR fixed in class HeartRateGraphView and
 		//                call this method in initialize() of this class
 		/*
-		var numMinutes = 30;
+		var numMinutes = 60;
 		var mHRHistory1Min = [55,55,55,55,56,56,56,56,56,58,58,58,62,62,62,65,65,65,65,70,70,70,70,72,72,72,72,73,73,73,73,74,74,76,76,76,76,78,78,78,78,120,130,125,123,110,100,90,78,77,77,74,74,72,72,67,67,67,67,67];
 		private function PopulateFakeHRHistory() {
 
