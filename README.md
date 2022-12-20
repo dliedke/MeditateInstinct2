@@ -1,10 +1,10 @@
 # Meditate
 
-A Garmin Connect IQ meditation app (originally from vtrifonov) that tracks as an activity the heart rate and provides vibration alert for Garmin Instinct 2.
+A Garmin Connect IQ meditation app (originally from vtrifonov) that tracks as an activity the heart rate and provides vibration alert for Garmin Instinct 2 / Crossover.
 
 ## Features
 
-- Meditation sessions from 5min to 30min with longer vibration in the end and small blip every 5min
+- Meditation sessions from 5min to 1 hour with longer vibration in the end and small blip every 5min
 
 - Summary stats at the end of the session
     - Tracks the overall min, avg and max HR
@@ -25,4 +25,4 @@ Set custom activity name using Garmin Connect or Garmin Express, refer to guide 
 ## Supported Devices
 - Garmin Instinct 2
 - Garmin Instinct 2s
-
+- Garmin Instinct Crossover
