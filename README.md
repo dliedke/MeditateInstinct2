@@ -25,4 +25,5 @@ Set custom activity name using Garmin Connect or Garmin Express, refer to guide 
 ## Supported Devices
 - Garmin Instinct 2
 - Garmin Instinct 2s
+- Garmin Instinct 2X Solar
 - Garmin Instinct Crossover
