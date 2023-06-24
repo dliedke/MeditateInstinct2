@@ -18,9 +18,9 @@ Set Activity Name as "Location & Device Activity Name" in Garmin Connect Setting
 
 Set custom activity name using Garmin Connect or Garmin Express, refer to guide https://support.garmin.com/en-US/?faq=SPo0TFvhQO04O36Y5TYRh5 for help.
 
-<img src="userGuideScreenshots/CoverImage1.gif" alt="Session picker demo" width="337" height="497"/>
-<img src="userGuideScreenshots/CoverImage0.gif" alt="Session demo detailed" width="337" height="497"/>
-<img src="userGuideScreenshots/CoverImage3.png" alt="Session demo detailed" width="337" height="337"/>
+<img src="userGuideScreenshots/CoverImage1.jpg" alt="Session picker demo" width="337" height="497"/>
+<img src="userGuideScreenshots/CoverImage0.jpg" alt="Session demo detailed" width="337" height="497"/>
+<img src="userGuideScreenshots/CoverImage3.jpg" alt="Session demo detailed" width="337" height="337"/>
 
 ## Supported Devices
 - Garmin Instinct 2
