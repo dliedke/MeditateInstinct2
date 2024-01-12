@@ -48,6 +48,7 @@ class Alert {
 	}
 		
 	function reset() {
+		// Default 5min interval alerts
 		me.type = IntervalAlertType.Repeat;
 		me.time = 60 * 5;
 		me.color = Gfx.COLOR_WHITE;

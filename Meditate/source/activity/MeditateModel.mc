@@ -45,6 +45,13 @@ class MeditateModel {
 
 	function getRepeatIntervalAlerts() {
 		var result = {};
+
+		// No interval alerts for 45min and 1h sessions
+		if (mSession.time >= 45 * 60)
+		{
+			return result;
+		}
+
 		var intervalAlerts = new IntervalAlerts();
 		intervalAlerts.addNew();
 		result.put(0,intervalAlerts.get(0));
