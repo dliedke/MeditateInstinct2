@@ -86,7 +86,7 @@ class HeartRateGraphView extends ScreenPicker.ScreenPickerView  {
 		// Draw Time text
 		dc.drawText(centerX + centerX / 2 - 45, 
 					centerY + centerY / 2 + 10 + heartRateChartPosY, 
-					Gfx.FONT_SYSTEM_XTINY, 
+					Gfx.FONT_SMALL, 
 					"Time:" + TimeFormatter.format(me.summaryModel.elapsedTime), 
 					Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
 

@@ -53,7 +53,7 @@ class MeditateView extends Ui.View {
   	    var hrStatusX = App.getApp().getProperty("meditateActivityIconsXPos");
         var hrStatusY = getYPosOffsetFromCenter(dc, 1) + iconsYOffset; 
   	    me.mHrStatus = new ScreenPicker.Icon({        
-        	:font => Gfx.FONT_XTINY,
+        	:font => Gfx.FONT_SMALL,
         	:symbol => "HR:",
         	:color=>Graphics.COLOR_WHITE,
         	:xPos => hrStatusX,
@@ -68,7 +68,7 @@ class MeditateView extends Ui.View {
     function renderLayoutElapsedTime(dc) { 	
     	var xPosCenter = dc.getWidth() / 2;
     	var yPosCenter = getYPosOffsetFromCenter(dc, 0) + iconsYOffset;
-    	me.mElapsedTime = createMeditateText(me.mMeditateModel.getColor(), TextFont, xPosCenter, yPosCenter, Gfx.TEXT_JUSTIFY_CENTER);
+    	me.mElapsedTime = createMeditateText(me.mMeditateModel.getColor(), Gfx.FONT_SMALL, xPosCenter, yPosCenter, Gfx.TEXT_JUSTIFY_CENTER);
     }
                 
     // Load your resources here
