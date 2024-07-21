@@ -1,4 +1,5 @@
 using Toybox.Attention;
+using Toybox.Timer;
 
 class VibeAlertsExecutor {
 	function initialize(meditateModel) {
@@ -19,15 +20,24 @@ class VibeAlertsExecutor {
 	}
 	
 	private function fireIfRequiredFinalAlert() {
+        if (me.mMeditateModel.elapsedTime >= me.mMeditateModel.getSessionTime()) {
+            // Vibrate long continuous
+            Attention.vibrate(getLongContinuous());
 
-	    if (me.mMeditateModel.elapsedTime >= me.mMeditateModel.getSessionTime()) {	    	
-		
-			// Vibrate long continuous
-			Attention.vibrate(getLongContinuous());
-		
-			me.mIsFinalAlertPending = false;
-	    }
-	}
+            // Start a timer for 2 seconds
+            var mTimer = new Timer.Timer();
+            mTimer.start(method(:onTimerComplete), 2000, false);
+
+            me.mIsFinalAlertPending = false;
+        }
+    }
+
+    public function onTimerComplete() {
+        // Vibrate long continuous again
+        Attention.vibrate(getLongContinuous());
+
+        me.mIsFinalAlertPending = false;
+    }
 
 	private function fireIfRequiredRepeatIntervalAlerts() {
 		for (var i = 0; i < me.mRepeatIntervalAlerts.size(); i++) {
