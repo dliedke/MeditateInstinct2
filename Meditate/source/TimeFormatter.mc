@@ -14,21 +14,17 @@ class TimeFormatter {
 	}
 
 	static function formatHours(timeInSec) {		
-		var timeCalc = timeInSec;
-		var seconds = timeCalc % 60;
-		timeCalc /= 60;
-		var minutes = timeCalc % 60;
-		timeCalc /= 60;
-		var hours = timeCalc % 24;
-		
+
 		var formattedTime;
 		
-		if (hours == 1) {
-			formattedTime = Lang.format("$1$ hour", [hours.format("%02d")]);
-		} else {
-			formattedTime = Lang.format("$1$ hours", [hours.format("%02d")]);
+		if (timeInSec == 60 * 60) {
+        	formattedTime = "1 hour";
+		} else if (timeInSec == 90 * 60) {
+			formattedTime = "1.5 hours";
+		} else if (timeInSec == 120 * 60) {
+			formattedTime = "2 hours";
 		}
-
+		
 		return formattedTime;
 	}
 

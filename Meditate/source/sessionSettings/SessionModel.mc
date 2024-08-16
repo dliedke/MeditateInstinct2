@@ -111,8 +111,24 @@ class SessionModel {
 		me.activityType = "Meditate";
 		}
 
-		// 15s for testing
+		// 90min
 		if (index == 8) {
+		me.time = 90 * 60;
+		me.color = Gfx.COLOR_WHITE;
+		me.vibePattern = VibePattern.LongContinuous;		
+		me.activityType = "Meditate";
+		}
+
+		// 120min
+		if (index == 9) {
+		me.time = 120 * 60;
+		me.color = Gfx.COLOR_WHITE;
+		me.vibePattern = VibePattern.LongContinuous;		
+		me.activityType = "Meditate";
+		}
+
+		// 15s for testing
+		if (index == 10) {
 		me.time = 15;
 		me.color = Gfx.COLOR_WHITE;
 		me.vibePattern = VibePattern.LongContinuous;		
