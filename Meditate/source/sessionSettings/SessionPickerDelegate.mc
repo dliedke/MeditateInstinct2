@@ -150,11 +150,14 @@ class SessionPickerDelegate extends ScreenPicker.ScreenPickerDelegate {
         details.titleColor = session.color;
         
         if (session.time >= 60*60)	{
-        	details.detailLines[1].value.text = "    " + TimeFormatter.formatHours(session.time);
+			// Hours
+        	details.detailLines[1].value.text = "   " + TimeFormatter.formatHours(session.time);
 		} else if (session.time > 59) {
-			details.detailLines[1].value.text = "    " + TimeFormatter.formatMinutes(session.time);
+			// Minutes
+			details.detailLines[1].value.text = " " + TimeFormatter.formatMinutes(session.time);
 		} else {
-			details.detailLines[1].value.text = "    " + TimeFormatter.formatSeconds(session.time);
+			// Seconds
+			details.detailLines[1].value.text = " " + TimeFormatter.formatSeconds(session.time);
 		}
 		
         details.setAllIconsXPos(me.sessionDetailsIconsXPos);

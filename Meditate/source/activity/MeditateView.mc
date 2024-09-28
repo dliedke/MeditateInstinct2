@@ -38,7 +38,7 @@ class MeditateView extends Ui.View {
     	});
     }
     
-    private static const TextFont = Gfx.FONT_XTINY;
+    private static const TextFont = Gfx.FONT_MEDIUM;
     
     private function renderBackground(dc) {				        
         dc.setColor(Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLACK);        
@@ -53,7 +53,7 @@ class MeditateView extends Ui.View {
   	    var hrStatusX = App.getApp().getProperty("meditateActivityIconsXPos");
         var hrStatusY = getYPosOffsetFromCenter(dc, 1) + iconsYOffset; 
   	    me.mHrStatus = new ScreenPicker.Icon({        
-        	:font => Gfx.FONT_SMALL,
+        	:font => Gfx.FONT_MEDIUM,
         	:symbol => "HR:",
         	:color=>Graphics.COLOR_WHITE,
         	:xPos => hrStatusX,
@@ -68,7 +68,7 @@ class MeditateView extends Ui.View {
     function renderLayoutElapsedTime(dc) { 	
     	var xPosCenter = dc.getWidth() / 2;
     	var yPosCenter = getYPosOffsetFromCenter(dc, 0) + iconsYOffset;
-    	me.mElapsedTime = createMeditateText(me.mMeditateModel.getColor(), Gfx.FONT_SMALL, xPosCenter, yPosCenter, Gfx.TEXT_JUSTIFY_CENTER);
+    	me.mElapsedTime = createMeditateText(me.mMeditateModel.getColor(), Gfx.FONT_MEDIUM, xPosCenter, yPosCenter, Gfx.TEXT_JUSTIFY_CENTER);
     }
                 
     // Load your resources here

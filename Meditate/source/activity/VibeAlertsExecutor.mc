@@ -15,7 +15,7 @@ class VibeAlertsExecutor {
 	function firePendingAlerts() {
 		if (me.mIsFinalAlertPending == true) {
 			me.fireIfRequiredFinalAlert();
-			me.fireIfRequiredRepeatIntervalAlerts();
+			me.fireIfRequiredRepeatIntervalAlerts();  // Comment to remove 5min alerts
 		}
 	}
 	
