@@ -6,16 +6,23 @@ class VibeAlertsExecutor {
 		me.mMeditateModel = meditateModel;
 		me.mRepeatIntervalAlerts = me.mMeditateModel.getRepeatIntervalAlerts();	
 		me.mIsFinalAlertPending = true;
+
+		// Retrieve interval alerts property from Garmin Express/Connect IQ 
+		me.mIntervalAlertsEnabled = Application.getApp().getProperty("intervalAlerts");
 	}
 	
 	private var mIsFinalAlertPending;
 	private var mMeditateModel;
 	private var mRepeatIntervalAlerts;
+	private var mIntervalAlertsEnabled;
 
 	function firePendingAlerts() {
 		if (me.mIsFinalAlertPending == true) {
 			me.fireIfRequiredFinalAlert();
-			//me.fireIfRequiredRepeatIntervalAlerts();  // Comment to remove 5min alerts
+
+			if (me.mIntervalAlertsEnabled == true) {
+				me.fireIfRequiredRepeatIntervalAlerts();  // Comment to remove 5min alerts	
+			}
 		}
 	}
 	

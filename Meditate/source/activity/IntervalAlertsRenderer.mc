@@ -8,6 +8,9 @@ class IntervalAlertsRenderer {
 		me.mRadius = radius;
 		me.mWidth = width;	
 		me.mRepeatPercentageTimes = me.createPercentageTimes(repeatIntervalAlerts);	
+
+		// Retrieve interval alerts property from Garmin Express/Connect IQ 
+		me.mIntervalAlertsEnabled = Application.getApp().getProperty("intervalAlerts");
 	}
 	
 	private var mSessionTime;
@@ -15,9 +18,12 @@ class IntervalAlertsRenderer {
 	private var mRadius;
 	private var mWidth;	
     private var mRepeatPercentageTimes;
+	private var mIntervalAlertsEnabled;
 	    
     function drawRepeatIntervalAlerts(dc) {    
-		me.drawIntervalAlerts(dc, me.mRepeatIntervalAlerts, me.mRepeatPercentageTimes);
+		if (mIntervalAlertsEnabled == true) {
+			me.drawIntervalAlerts(dc, me.mRepeatIntervalAlerts, me.mRepeatPercentageTimes);
+		}
     }
     
     private function createPercentageTimes(intervalAlerts) {
