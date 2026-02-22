@@ -138,9 +138,14 @@ module HrvAlgorithms {
 			return summary;
 		}
 								
-		function finish() {		
-			me.mFitSession.save();
-			me.mFitSession = null;
+		function finish() {
+			try {
+				me.mFitSession.save();
+				me.mFitSession = null;
+				return true;
+			} catch (e) {
+				return false;
+			}
 		}
 			
 		function discard() {		
