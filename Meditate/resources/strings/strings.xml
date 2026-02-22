@@ -1,6 +1,7 @@
 <strings>
     <string id="AppName">Meditate</string>
     <string id="ConfirmSaveHeader">Save Session?</string>
+    <string id="RetrySaveHeader">Save Failed. Retry?</string>
     <string id="summaryRollupMenu_title">Sessions Summary</string>
     <string id="summaryRollupMenuOption_exit">Exit</string>
 	<string id="activityDelayedFinishingText">Finishing...</string>

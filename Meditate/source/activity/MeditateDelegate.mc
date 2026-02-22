@@ -38,12 +38,25 @@ class MeditateDelegate extends Ui.BehaviorDelegate {
     	Ui.switchToView(summaryViewDelegate.createScreenPickerView(), summaryViewDelegate, Ui.SLIDE_LEFT);  
     }
     
-    function onShowNextViewConfirmDialog() {      
+    function onShowNextViewConfirmDialog() {
     	onShowNextView();
-     	
+
     	var confirmSaveHeader = Ui.loadResource(Rez.Strings.ConfirmSaveHeader);
     	var confirmSaveDialog = new Ui.Confirmation(confirmSaveHeader);
-        Ui.pushView(confirmSaveDialog, new YesNoDelegate(me.mMeditateActivity.method(:finish), me.mMeditateActivity.method(:discard)), Ui.SLIDE_IMMEDIATE);
+        Ui.pushView(confirmSaveDialog, new YesNoDelegate(method(:onConfirmSave), me.mMeditateActivity.method(:discard)), Ui.SLIDE_IMMEDIATE);
+    }
+
+    function onConfirmSave() {
+    	var saved = me.mMeditateActivity.finish();
+    	if (!saved) {
+    		onRetrySave();
+    	}
+    }
+
+    function onRetrySave() {
+    	var retrySaveHeader = Ui.loadResource(Rez.Strings.RetrySaveHeader);
+    	var retrySaveDialog = new Ui.Confirmation(retrySaveHeader);
+    	Ui.pushView(retrySaveDialog, new YesNoDelegate(method(:onConfirmSave), me.mMeditateActivity.method(:discard)), Ui.SLIDE_IMMEDIATE);
     }
     
     function onShowNextView() {    
